@@ -41,6 +41,10 @@ namespace calculator
                     b = a / float.Parse(textBox1.Text);
                     textBox1.Text = b.ToString();
                     break;
+                case 5:
+                    b = (long)Math.Pow(a, int.Parse(textBox1.Text));
+                    textBox1.Text = b.ToString();
+                    break;
 
                 default:
                     break;
@@ -169,6 +173,24 @@ namespace calculator
                 textBox1.Text = textBox1.Text.Replace("-", "");
                 znak = true;
             }
+        }
+
+        private void Button20_Click(object sender, EventArgs e)
+        {
+            a = 2;
+            textBox1.Clear();
+            count = 5;
+            label1.Text = a.ToString() + "^";
+            znak = true;
+        }
+
+        private void Button21_Click(object sender, EventArgs e)
+        {
+            a = 10;
+            textBox1.Clear();
+            count = 5;
+            label1.Text = a.ToString() + "^";
+            znak = true;
         }
 
         private void Button2_Click(object sender, EventArgs e)
